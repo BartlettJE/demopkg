@@ -1,0 +1,15 @@
+Package: demopkg
+Date: 2022-10-05
+Title: Demo package
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "James", 
+    family = "Bartlett",
+    email = "james.bartlett@glasgow.ac.uk", 
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-4191-5245"))
+Description: A demo for coding club 2022/2023. 
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
