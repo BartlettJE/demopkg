@@ -17,11 +17,3 @@ A character string providing the rounded value with specified number of decimal 
 \description{
 round0 rounds the values in its first argument to the specified number of decimal places. In contrast to round, this function retains trailing zeroes to comply with APA style.
 }
-\examples{
-# Using only the number argument with default decimals
-round0(x = 1.83028)
-
-# Controlling the number of decimals to round to
-round0(x = 1.83028,
-      digits = 3)
-}

@@ -7,15 +7,6 @@
 #' round0 rounds the values in its first argument to the specified number of decimal places. In contrast to round, this function retains trailing zeroes to comply with APA style.
 #'
 #' @return A character string providing the rounded value with specified number of decimal places.
-#' @export
-#'
-#' @examples
-#'# Using only the number argument with default decimals
-#'round0(x = 1.83028)
-#'
-#'# Controlling the number of decimals to round to
-#'round0(x = 1.83028,
-#'       digits = 3)
 
 round0 <- function(x, digits = 0){
   # Create formatting string
@@ -65,7 +56,7 @@ apa_t_pair <- function(x,
                        alpha = .05,
                        conf.level = 0.95){
 
-  t_results <- t.test(
+  t_results <- stats::t.test(
     x = x,
     y = y,
     paired = TRUE,
@@ -79,9 +70,9 @@ apa_t_pair <- function(x,
     template,
     # Define descriptives
     mean1   = round0(mean(x), 1),
-    sd1     = round0(sd(x), 1),
+    sd1     = round0(stats::sd(x), 1),
     mean2   = round0(mean(y), 1),
-    sd2     = round0(sd(y), 1),
+    sd2     = round0(stats::sd(y), 1),
     # Check whether p-value was smaller than user defined alpha
     non     = ifelse(t_results$p.value < alpha, "", "non-"),
     # Define t-test results
