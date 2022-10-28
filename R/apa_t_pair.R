@@ -6,6 +6,38 @@ round0 <- function(x, digits = 0){
   return(x0)
 }
 
+#' APA Text for Paired Samples T-Test
+#'
+#' @description
+#' Create APA formatted text for the results of a paired samples t-test in the following format:
+#'
+#' A paired-samples t-test was conducted to compare \{dv\} between \{level1\} (M = \{mean1\}, SD = \{sd1\}) and \{level2\} (M = \{mean2\}, SD = \{sd2\}). Using an alpha of \{alpha\}, there was a \{non\}significant difference; t(\{df\}) = \{t_value\}, \{p_value\}, mean difference = \{mean_diff\}, \{CI\}% CI = \[\{lower_CI\}, \{upper_CI\}\].
+#'
+#'
+#' @param x A (non-empty) numeric vector of data values for level 1.
+#' @param y A (non-empty) numeric vector of data values for level 2.
+#' @param dv A character string describing the DV in the output text.
+#' @param level1 A character string describing level 1 in the output text.
+#' @param level2 A character string describing level 2 in the output text.
+#' @param alpha The critical alpha for determining statistical significance.
+#' @param conf.level The confidence level for specifying the coverage of confidence intervals.
+#'
+#' @return T character string combining an APA style t-test with a description of the results.
+#' @export
+#'
+#' @examples
+#' # Use generic text
+#' apa_t_pair(x = self_res_att$f_self,
+#'            y = self_res_att$f_non)
+
+# Specify the text for dv and level
+
+#' apa_t_pair(x = self_res_att$f_self,
+#'            y = self_res_att$f_non,
+#'            dv = "preferences for female faces",
+#'            level1 = "participants who resembled those faces",
+#'            level2 = "non-self participants")
+
 apa_t_pair <- function(x,
                        y,
                        dv = "the DV",
