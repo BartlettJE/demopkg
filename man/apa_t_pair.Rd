@@ -30,7 +30,7 @@ apa_t_pair(
 \item{conf.level}{The confidence level for specifying the coverage of confidence intervals.}
 }
 \value{
-T character string combining an APA style t-test with a description of the results.
+A character string combining an APA style t-test with a description of the results.
 }
 \description{
 Create APA formatted text for the results of a paired samples t-test in the following format:

@@ -1,3 +1,22 @@
+#' Control Zeros on Rounding Digits
+#'
+#' @param x A (non-empty) numeric vector of data values.
+#' @param digits Integer indicating the number of decimal places (round).
+#'
+#' @description
+#' round0 rounds the values in its first argument to the specified number of decimal places. In contrast to round, this function retains trailing zeroes to comply with APA style.
+#'
+#' @return A character string providing the rounded value with specified number of decimal places.
+#' @export
+#'
+#' @examples
+#'# Using only the number argument with default decimals
+#'round0(x = 1.83028)
+#'
+#'# Controlling the number of decimals to round to
+#'round0(x = 1.83028,
+#'       digits = 3)
+
 round0 <- function(x, digits = 0){
   # Create formatting string
   fmt <- paste0("%.", digits, "f")
@@ -22,7 +41,7 @@ round0 <- function(x, digits = 0){
 #' @param alpha The critical alpha for determining statistical significance.
 #' @param conf.level The confidence level for specifying the coverage of confidence intervals.
 #'
-#' @return T character string combining an APA style t-test with a description of the results.
+#' @return A character string combining an APA style t-test with a description of the results.
 #' @export
 #'
 #' @examples
