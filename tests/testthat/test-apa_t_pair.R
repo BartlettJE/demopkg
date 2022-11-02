@@ -30,3 +30,18 @@ test_that("same x and y",{
                fixed = TRUE)
 })
 
+# Check its the right number of digits
+# Test 1 - Are there 3 digits?
+# Test 2 - Is there 1 digit?
+test_that("Round 0 digits", {
+  number <- 1.847362
+  digits_1 <- round0(number, 3)
+  digits_1 <- unlist(strsplit(digits_1, "[.]"))[2]
+
+  expect_equal(nchar(digits_1), 3)
+
+  digits_2 <- round0(number, 1)
+  digits_2 <- unlist(strsplit(digits_2, "[.]"))[2]
+
+  expect_equal(nchar(digits_2), 1)
+})
