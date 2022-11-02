@@ -56,6 +56,11 @@ apa_t_pair <- function(x,
                        alpha = .05,
                        conf.level = 0.95){
 
+  # error checks
+  if (all(x == y)){
+    stop("x and y cannot be identical")
+  }
+
   t_results <- stats::t.test(
     x = x,
     y = y,
