@@ -1,0 +1,30 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# demopkg
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of demopkg is to demonstrate how to make an R package. 
+
+## Installation
+
+You can install demopkg from [GitHub](https://github.com) with:
+
+```{r}
+#| eval: false
+devtools::install_github("BartlettJE/demopkg")
+```
