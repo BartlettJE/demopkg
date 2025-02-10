@@ -45,6 +45,11 @@ apa_t_pair <- function(xcol,
                        level1 = "level 1",
                        level2 = "level 2",
                        alpha = .05){
+  # error checking ----
+  if (length(xcol) != length(ycol)) {
+    stop("The arguments x and y need to have the same number of values.")
+  }
+
   # analysis
   t_results <- stats::t.test(
     x = xcol,
